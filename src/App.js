@@ -1,24 +1,32 @@
 import React from 'react';
-import Carousel from './components/Carousel';
-import Destinations from './components/Destinations';
-import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import Search from './components/Search';
-import Selects from './components/Selects';
+import { Routes, Route } from "react-router-dom"
+import Destinations from './components/Destinations';
+import Booking from './components/Booking';
+import Places from './components/Places';
+import Carousel from './components/Carousel';
+import Footer from './components/Footer';
 
-function App() {
+function App () {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Destinations />
-      <Search />
-      <Selects />
-      <Carousel />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+
   );
 }
 
 export default App;
+
+function Home () {
+  return (<div>
+    <Navbar />
+    <Hero />
+    <Destinations />
+    <Booking />
+    <Places />
+    <Carousel />
+    <Footer />
+  </div>);
+}

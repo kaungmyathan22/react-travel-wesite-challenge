@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from "react";
 import BoraBora from '../assets/borabora.jpg';
 import BoraBora2 from '../assets/borabora2.jpg';
 import Maldives from '../assets/maldives.jpg';
@@ -7,19 +6,17 @@ import Maldives2 from '../assets/maldives2.jpg';
 import KeyWest from '../assets/keywest.jpg';
 
 const Destinations = () => {
-  return (
-    <div className='max-w-[1240px] mx-auto py-16 px-4 text-center'>
-        <h1>All-Inclusive Resorts</h1>
-        <p className='py-4'>On the Caribbean's Best Beaches</p>
-        <div className='grid grid-rows-none md:grid-cols-5 py-4 gap-2 md:gap-4'>
-            <img className='w-full h-full object-cover col-span-2 md:col-span-3 row-span-2' src={BoraBora} alt="/" />
-            <img className='w-full h-full object-cover' src={BoraBora2} alt="/" />
-            <img className='w-full h-full object-cover' src={Maldives} alt="/" />
-            <img className='w-full h-full object-cover' src={Maldives2} alt="/" />
-            <img className='w-full h-full object-cover' src={KeyWest} alt="/" />
+    return <div className='min-h-screen lg:max-w-6xl w-full px-5 mx-auto flex flex-col items-center justify-center gap-3 lg:px-0'>
+        <h1 className='font-bold text-4xl mt-10'>All-Inclusive Resorts</h1>
+        <p className='text-lg text-gray-500 mb-5'>On the Caribbean's Best Beaches</p>
+        <div className="grid grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-3">
+            <img src={BoraBora} className="w-full h-full object-cover col-span-2 lg:col-span-3 row-span-2" alt="" />
+            <img src={BoraBora2} className="w-full h-full object-cover" alt="" />
+            <img src={Maldives} className="w-full h-full object-cover" alt="" />
+            <img src={Maldives2} className="w-full h-full object-cover" alt="" />
+            <img src={KeyWest} className="w-full h-full object-cover" alt="" />
         </div>
-    </div>
-  )
-} 
+    </div>;
+};
 
-export default Destinations
+export default Destinations;
